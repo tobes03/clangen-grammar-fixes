@@ -190,13 +190,21 @@ class HandleShortEvents:
             self.handle_mass_death()
             if len(self.multi_cat) <= 2:
                 return
+            
+        # remove cats from involved_cats if theyre supposed to be
+        if self.chosen_event.r_c and "r_c" in self.chosen_event.exclude_involved:
+            self.involved_cats.remove(self.random_cat.ID)
+        if "m_c" in self.chosen_event.exclude_involved:
+            self.involved_cats.remove(self.main_cat.ID)
 
         # create new cats (must happen here so that new cats can be included in further changes)
         self.handle_new_cats()
 
         # give accessory
         if self.chosen_event.new_accessory:
-            self.handle_accessories()
+            if self.handle_accessories() is False:
+                return
+
 
         # change relationships before killing anyone
         if self.chosen_event.relationships:
@@ -399,8 +407,24 @@ class HandleShortEvents:
                     if acc in acc_list:
                         acc_list.remove(acc)
 
-        if acc_list:
-            self.main_cat.pelt.accessory = random.choice(acc_list)
+        accessory_groups = [pelts.collars, pelts.head_accessories, pelts.tail_accessories, pelts.body_accessories]
+        if self.main_cat.pelt.accessory:
+            for acc in self.main_cat.pelt.accessory:
+                # find which accessory group it belongs to
+                for i, lst in enumerate(accessory_groups):
+                    if acc in lst:
+                        # remove that group from possible accessories
+                        acc_list = [a for a in acc_list if a not in accessory_groups[i]]
+                        break
+
+        if not acc_list:
+            return False
+
+        if self.main_cat.pelt.accessory:
+            self.main_cat.pelt.accessory.append(random.choice(acc_list))
+        else:
+            self.main_cat.pelt.accessory = [random.choice(acc_list)]
+
 
     def handle_transition(self):
         """
@@ -789,7 +813,7 @@ class HandleShortEvents:
 
         # adjust entire herb store
         if supply_type == "all_herb":
-            for herb, count in herb_supply.entire_supply.copy():
+            for (herb, count) in herb_supply.entire_supply.items():
                 herb_list.append(herb)
                 if adjustment == "reduce_full":
                     herb_supply.remove_herb(herb, count)
