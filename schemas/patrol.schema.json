@@ -7,6 +7,31 @@
     "outcome": {
       "type": "object",
       "properties": {
+        "min_max_status": {
+          "description": "Allows specification of the minimum and maximum number of specific types of cats that are allowed on this outcome.",
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "medicine cat",
+              "warrior",
+              "leader",
+              "deputy",
+              "apprentice",
+              "medicine cat apprentice",
+              "healer cats",
+              "normal adult",
+              "all apprentices"
+            ]
+          },
+          "additionalProperties": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
         "text": {
           "description": "Displayed outcome text.",
           "type": "string"
@@ -146,13 +171,9 @@
           "description": "Controls the history-text for scars and death.",
           "type": "object",
           "properties": {
-            "reg_death": {
+            "death": {
               "type": "string",
-              "description": "Death history text for non-leaders. Whole sentence."
-            },
-            "lead_death": {
-              "type": "string",
-              "description": "Death history text for leaders. Sentence fragment."
+              "description": "Death history text. Whole sentence."
             },
             "scar": {
               "type": "string",
