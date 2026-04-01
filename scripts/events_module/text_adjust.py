@@ -405,16 +405,37 @@ def event_text_adjust(
                 str(patrol_leader.name),
                 choice(patrol_leader.pronouns),
             )
+    
+    # patrol_lead prefix only - narrow application
+    if "p_prefix" in text:
+        if patrol_leader:
+            replace_dict["p_prefix"] = (
+                str(patrol_leader.name.prefix)
+            )
 
     # random_cat
     if "r_c" in text:
         if random_cat:
             replace_dict["r_c"] = (str(random_cat.name), get_pronouns(random_cat))
 
+    # random_cat prefix only - narrow application
+    if "r_prefix" in text:
+        if patrol_leader:
+            replace_dict["r_prefix"] = (
+                str(random_cat.name.prefix)
+            )
+
     # stat cat
     if "s_c" in text:
         if stat_cat:
             replace_dict["s_c"] = (str(stat_cat.name), get_pronouns(stat_cat))
+
+    # stat_cat prefix only - narrow application
+    if "s_prefix" in text:
+        if patrol_leader:
+            replace_dict["s_prefix"] = (
+                str(stat_cat.name.prefix)
+            )
 
     # other_cats
     if patrol_cats:
