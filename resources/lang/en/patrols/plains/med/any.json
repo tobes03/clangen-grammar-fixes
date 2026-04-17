@@ -15,30 +15,12 @@
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {
-            "apprentice": [
-                -1,
-                -1
-            ],
-            "medicine cat": [
-                1,
-                6
-            ],
-            "medicine cat apprentice": [
-                1,
-                6
-            ],
-            "healer cats": [
-                1,
-                6
-            ],
-            "normal adult": [
-                -1,
-                -1
-            ]
+            "medicine cat": [1, 1],
+            "medicine cat apprentice": [1, 1]
         },
         "frequency": 4,
         "intro_text": "p_l looks at the calm, cloudless sky and decides it's a good opportunity to show app1 where some of the most commonly needed herbs are located in their territory, both above and below ground.",
-        "decline_text": "As {PRONOUN/p_l/subject} {VERB/p_l/look/looks} at app1's absent-minded gaze, {PRONOUn/p_l/subject} {VERB/p_l/hesitate/hesitates} and {VERB/p_l/change/changes} {PRONOUN/p_l/poss} mind. Maybe another day would be best, when app1 is more focused and less liable to get lost in the tunnels.",
+        "decline_text": "As {PRONOUN/p_l/subject} {VERB/p_l/look/looks} at app1's absent-minded gaze, {PRONOUN/p_l/subject} {VERB/p_l/hesitate/hesitates} and {VERB/p_l/change/changes} {PRONOUN/p_l/poss} mind. Maybe another day would be best, when app1 is more focused and less liable to get lost in the tunnels.",
         "chance_of_success": 65,
         "success_outcomes": [
             {
@@ -50,17 +32,21 @@
                 "relationships": [
                     {
                         "cats_to": [
-                            "patrol"
+                            "p_l"
                         ],
                         "cats_from": [
-                            "patrol"
+                            "app1"
                         ],
-                        "mutual": false,
+                        "mutual": true,
                         "values": [
                             "respect",
                             "trust"
                         ],
-                        "amount": 5
+                        "amount": 5,
+                        "log": {
+                            "cats_from": "cat_from listened to cat_to attentively during an herb-gathering patrol.",
+                            "cats_to": "cat_to felt a measure of confidence in cat_from's attentiveness during an herb-gathering patrol."
+                        }
                     }
                 ],
                 "frequency": 4
@@ -74,17 +60,21 @@
                 "relationships": [
                     {
                         "cats_to": [
-                            "patrol"
+                            "p_l"
                         ],
                         "cats_from": [
-                            "patrol"
+                            "app1"
                         ],
-                        "mutual": false,
+                        "mutual": true,
                         "values": [
                             "respect",
                             "trust"
                         ],
-                        "amount": 5
+                        "amount": 5,
+                        "log": {
+                            "cats_from": "cat_from found a hidden herb patch during a lesson, impressing cat_to.",
+                            "cats_to": "cat_to was impressed by cat_from's keen observation by finding a hidden herb patch."
+                        }
                     }
                 ],
                 "frequency": 1
@@ -97,17 +87,20 @@
                 "relationships": [
                     {
                         "cats_to": [
-                            "patrol"
+                            "app1"
                         ],
                         "cats_from": [
-                            "patrol"
+                            "p_l"
                         ],
                         "mutual": false,
                         "values": [
                             "respect",
                             "trust"
                         ],
-                        "amount": -5
+                        "amount": -5,
+                        "log": {
+                            "cats_from": "Frustrated by cat_to's inattention, cat_from ended {PRONOUN/cat_from/poss} gathering lesson early."
+                        }
                     }
                 ],
                 "frequency": 4
@@ -132,22 +125,7 @@
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {
-            "apprentice": [
-                -1,
-                -1
-            ],
-            "medicine cat apprentice": [
-                1,
-                6
-            ],
-            "healer cats": [
-                1,
-                6
-            ],
-            "normal adult": [
-                -1,
-                -1
-            ]
+            "medicine cat apprentice": [1, 1]
         },
         "frequency": 4,
         "intro_text": "app1 has been sent out into the grasslands to try to find some specific herbs alone.",
@@ -221,13 +199,16 @@
                             "like",
                             "respect"
                         ],
-                        "amount": 5
+                        "amount": 5,
+                        "log": {
+                            "cats_from": "cat_to and cat_from had a productive time searching all over the plains for herbs."
+                        }
                     }
                 ],
                 "frequency": 4
             },
             {
-                "text": "p_l and r_c decide on a little friendly competition - one medicine cat to another, like all those silly bets the warriors make about hunting prey. They reunite when the sun is going down and walk into camp purring and playfully shoving each other with both their mouths full of herbs.",
+                "text": "p_l and r_c decide on a little friendly competition — one medicine cat to another, like all those silly bets the warriors make about hunting prey. They reunite when the sun is going down and walk into camp purring and playfully shoving each other with both their mouths full of herbs.",
                 "exp": 10,
                 "herbs": [
                     "random_herbs"
@@ -245,7 +226,10 @@
                             "like",
                             "respect"
                         ],
-                        "amount": 5
+                        "amount": 5,
+                        "log": {
+                            "cats_from": "cat_to and cat_from had fun during an impromptu herb-gathering competition."
+                        }
                     }
                 ],
                 "frequency": 1
@@ -268,7 +252,10 @@
                             "like",
                             "respect"
                         ],
-                        "amount": -5
+                        "amount": -5,
+                        "log": {
+                            "cats_from": "cat_to and cat_from became irritated with each other after a fruitless herb-gathering patrol."
+                        }
                     }
                 ],
                 "frequency": 4
@@ -289,7 +276,10 @@
                             "like",
                             "respect"
                         ],
-                        "amount": -5
+                        "amount": -12,
+                        "log": {
+                            "cats_from": "cat_to and cat_from got into a huge argument over whose fault it was that an herb-gathering patrol failed."
+                        }
                     }
                 ],
                 "frequency": 4

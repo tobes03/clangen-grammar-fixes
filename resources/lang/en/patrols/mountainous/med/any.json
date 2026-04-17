@@ -15,14 +15,8 @@
         "min_cats": 2,
         "max_cats": 2,
         "min_max_status": {
-            "medicine cat": [
-                1,
-                1
-            ],
-            "medicine cat apprentice": [
-                1,
-                1
-            ]
+            "medicine cat": [1, 1],
+            "medicine cat apprentice": [1, 1]
         },
         "relationship_constraint": ["mentor/app"],
         "frequency": 4,
@@ -51,8 +45,8 @@
                         ],
                         "amount": 5,
                         "log": {
-                            "cats_from": "app1 learned a lot from p_l during a herb gathering lesson.",
-                            "cats_to": "app1 listened attentively to p_l when {PRONOUN/p_l/subject} taught {PRONOUN/app1/object} where certain herbs are found."
+                            "cats_from": "cat_from listened to cat_to attentively during an herb-gathering patrol.",
+                            "cats_to": "cat_to felt a measure of confidence in cat_from's attentiveness during an herb-gathering patrol."
                         }
                     }
                 ],
@@ -79,8 +73,8 @@
                         ],
                         "amount": 5,
                         "log": {
-                            "cats_from": "app1 learned a lot from p_l during a herb gathering lesson.",
-                            "cats_to": "p_l was impressed when app1 found a hidden herb patch during a lesson."
+                            "cats_from": "cat_from found a hidden herb patch during a lesson, impressing cat_to.",
+                            "cats_to": "cat_to was impressed by cat_from's keen observation by finding a hidden herb patch."
                         }
                     }
                 ],
@@ -101,13 +95,12 @@
                         ],
                         "mutual": false,
                         "values": [
-                            "like",
                             "respect",
                             "trust"
                         ],
                         "amount": -5,
                         "log": {
-                            "cats_from": "p_l was frustrated by app1's inability to focus during a lesson."
+                            "cats_from": "Frustrated by cat_to's inattention, cat_from ended {PRONOUN/cat_from/poss} gathering lesson early."
                         }
                     }
                 ],
@@ -131,22 +124,7 @@
         "min_cats": 1,
         "max_cats": 1,
         "min_max_status": {
-            "apprentice": [
-                -1,
-                -1
-            ],
-            "medicine cat apprentice": [
-                1,
-                6
-            ],
-            "healer cats": [
-                1,
-                6
-            ],
-            "normal adult": [
-                -1,
-                -1
-            ]
+            "medicine cat apprentice": [1, 1]
         },
         "frequency": 4,
         "intro_text": "app1 has been sent out into the mountains to try to find herbs alone.",
@@ -154,7 +132,7 @@
         "chance_of_success": 65,
         "success_outcomes": [
             {
-                "text": "app1 is focused, determined to prove {PRONOUN/app1/poss} independence. {PRONOUN/app1/subject/CAP} {VERB/app1/find/finds} the herbs easily and {VERB/app1/bring/brings} them back to camp with {PRONOUN/app1/poss} head held up high - no sweat, no stress, no fuss.",
+                "text": "app1 is focused, determined to prove {PRONOUN/app1/poss} independence. {PRONOUN/app1/subject/CAP} {VERB/app1/find/finds} the herbs easily and {VERB/app1/bring/brings} them back to camp with {PRONOUN/app1/poss} head held up high — no sweat, no stress, no fuss.",
                 "exp": 10,
                 "herbs": [
                     "random_herbs"
@@ -220,13 +198,16 @@
                             "like",
                             "respect"
                         ],
-                        "amount": 5
+                        "amount": 5,
+                        "log": {
+                            "cats_from": "cat_to and cat_from had a productive time searching the mountain meadows for herbs."
+                        }
                     }
                 ],
                 "frequency": 4
             },
             {
-                "text": "p_l and r_c decide on a little friendly competition - one medicine cat to another, like all those silly bets the warriors make about hunting prey. They reunite when the sun is going down and walk into camp purring and playfully shoving each other with both their mouths full of herbs.",
+                "text": "p_l and r_c decide on a little friendly competition — one medicine cat to another, like all those silly bets the warriors make about hunting prey. They reunite when the sun is going down and walk into camp purring and playfully shoving each other with both their mouths full of herbs.",
                 "exp": 10,
                 "herbs": [
                     "random_herbs"
@@ -244,7 +225,10 @@
                             "like",
                             "respect"
                         ],
-                        "amount": 5
+                        "amount": 5,
+                        "log": {
+                            "cats_from": "cat_to and cat_from had fun during an impromptu herb-gathering competition."
+                        }
                     }
                 ],
                 "frequency": 1
@@ -267,7 +251,10 @@
                             "like",
                             "respect"
                         ],
-                        "amount": -5
+                        "amount": -5,
+                        "log": {
+                            "cats_from": "cat_to and cat_from became irritated with each other after a fruitless herb-gathering patrol."
+                        }
                     }
                 ],
                 "frequency": 4
@@ -288,7 +275,10 @@
                             "like",
                             "respect"
                         ],
-                        "amount": -5
+                        "amount": -12,
+                        "log": {
+                            "cats_from": "cat_to and cat_from got into a huge argument over whose fault it was that an herb-gathering patrol failed."
+                        }
                     }
                 ],
                 "frequency": 4

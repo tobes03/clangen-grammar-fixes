@@ -36,17 +36,21 @@
                 "relationships": [
                     {
                         "cats_to": [
-                            "patrol"
+                            "p_l"
                         ],
                         "cats_from": [
-                            "patrol"
+                            "app1"
                         ],
-                        "mutual": false,
+                        "mutual": true,
                         "values": [
                             "respect",
                             "trust"
                         ],
-                        "amount": 5
+                        "amount": 5,
+                        "log": {
+                            "cats_from": "cat_from listened to cat_to attentively during an herb-gathering patrol.",
+                            "cats_to": "cat_to felt a measure of confidence in cat_from's attentiveness during an herb-gathering patrol."
+                        }
                     }
                 ],
                 "frequency": 4
@@ -57,17 +61,21 @@
                 "relationships": [
                     {
                         "cats_to": [
-                            "patrol"
+                            "p_l"
                         ],
                         "cats_from": [
-                            "patrol"
+                            "app1"
                         ],
-                        "mutual": false,
+                        "mutual": true,
                         "values": [
                             "respect",
                             "trust"
                         ],
-                        "amount": 5
+                        "amount": 5,
+                        "log": {
+                            "cats_from": "cat_from found a hidden herb patch during a lesson, impressing cat_to.",
+                            "cats_to": "cat_to was impressed by cat_from's keen observation by finding a hidden herb patch."
+                        }
                     }
                 ],
                 "frequency": 1
@@ -80,17 +88,20 @@
                 "relationships": [
                     {
                         "cats_to": [
-                            "patrol"
+                            "app1"
                         ],
                         "cats_from": [
-                            "patrol"
+                            "p_l"
                         ],
                         "mutual": false,
                         "values": [
                             "respect",
                             "trust"
                         ],
-                        "amount": -5
+                        "amount": -5,
+                        "log": {
+                            "cats_from": "Frustrated by cat_to's inattention, cat_from ended {PRONOUN/cat_from/poss} gathering lesson early."
+                        }
                     }
                 ],
                 "frequency": 4
@@ -129,14 +140,14 @@
                 "frequency": 4
             },
             {
-                "text": "app1 goes to a known herb patch - but the plant has died! They don't give up, hunting around in the area until they find a smaller overlooked bush that still has leaves on it.",
+                "text": "app1 goes to a known herb patch — but the plant has died! They don't give up, hunting around in the area until they find a smaller overlooked bush that still has leaves on it.",
                 "exp": 10,
                 "frequency": 1
             }
         ],
         "fail_outcomes": [
             {
-                "text": "app1 goes to a known herb patch - but the plant has died! They give up and return to camp, feeling terrible.",
+                "text": "app1 goes to a known herb patch — but the plant has died! They give up and return to camp, feeling terrible.",
                 "exp": 0,
                 "frequency": 4
             }
@@ -181,19 +192,19 @@
                         ],
                         "mutual": false,
                         "values": [
-                            "trust",
+                            "like",
                             "respect"
                         ],
                         "amount": 5,
                         "log": {
-                            "cats_from": "from_cat and to_cat felt more confident in each other after gathering herbs together."
+                            "cats_from": "cat_to and cat_from had a productive time searching an island in the swamp for herbs."
                         }
                     }
                 ],
                 "frequency": 4
             },
             {
-                "text": "p_l and r_c decide on a little friendly competition - one medicine cat to another, like all those silly bets the warriors make about hunting prey. They reunite when the sun is going down and walk into camp purring and playfully shoving each other with both their mouths full of herbs.",
+                "text": "p_l and r_c decide on a little friendly competition — one medicine cat to another, like all those silly bets the warriors make about hunting prey. They reunite when the sun is going down and walk into camp purring and playfully shoving each other with both their mouths full of herbs.",
                 "exp": 10,
                 "herbs": [
                     "random_herbs"
@@ -213,7 +224,7 @@
                         ],
                         "amount": 5,
                         "log": {
-                            "cats_from": "from_cat and to_cat enjoyed a friendly competition while gathering herbs."
+                            "cats_from": "cat_to and cat_from had fun during an impromptu herb-gathering competition."
                         }
                     }
                 ],
@@ -239,7 +250,7 @@
                         ],
                         "amount": -5,
                         "log": {
-                            "cats_from": "from_cat and to_cat were short with each other after failing to gathering any herbs."
+                            "cats_from": "cat_to and cat_from became irritated with each other after a fruitless herb-gathering patrol."
                         }
                     }
                 ],
