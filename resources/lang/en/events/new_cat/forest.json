@@ -8,7 +8,7 @@
             "any"
         ],
         "frequency": 2,
-        "event_text": "m_c returned to camp with a kitten tottering behind {PRONOUN/m_c/object}, and explains that {PRONOUN/m_c/subject} found {PRONOUN/n_c:0/object} wandering — lost — around the forest, no parent in sight.",
+        "event_text": "m_c returned to camp with a kitten tottering behind {PRONOUN/m_c/object} and explains that {PRONOUN/m_c/subject} found {PRONOUN/n_c:0/object} wandering lost in the forest, no parent in sight.",
         "m_c": {
             "age": [
                 "young adult",
@@ -32,7 +32,10 @@
                 "cats_to": ["n_c:0"],
                 "mutual": true,
                 "values": ["comfort", "like"],
-                "amount": 10
+                "amount": 10,
+                "log": {
+                    "cats_from": "m_c found n_c:0 wandering the forest as a kitten and brought {PRONOUN/n_c:0/object} into the Clan."
+                }
             }
         ],
         "outsider": {
@@ -76,7 +79,10 @@
                 "cats_to": ["n_c:0"],
                 "mutual": true,
                 "values": ["comfort", "like"],
-                "amount": 10
+                "amount": 10,
+                "log": {
+                    "cats_from": "m_c found n_c:0 wandering the forest as a kitten and brought {PRONOUN/n_c:0/object} into the Clan."
+                }
             }
         ],
         "outsider": {

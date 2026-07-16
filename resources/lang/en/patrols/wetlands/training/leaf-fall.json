@@ -11,7 +11,7 @@
             "training"
         ],
         "tags": [],
-        "patrol_art": "gen_train_ghost",
+        "patrol_art": "cat_sprites/gen_train_ghost_WrWrWr",
         "min_cats": 4,
         "max_cats": 6,
         "min_max_status": {
@@ -104,7 +104,7 @@
                         ],
                         "amount": -10,
                         "log": {
-                            "cats_from": "cat_from disliked how cat_to's story depicted cats as powerless to Starclan."
+                            "cats_from": "cat_from disliked how cat_to's story depicted cats as powerless to StarClan."
                         }
                     },
                     {
