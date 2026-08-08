@@ -444,5 +444,69 @@
                 }
             }
         }
+    },
+    {
+        "id": "rom_inc_high_matetraitstrict",
+        "strings": [
+            "m_c is attracted to r_c's hard-working nature.",
+            "r_c sets a high standard for {PRONOUN/r_c/self} and others that m_c notices and appreciates.",
+            "m_c doesn't seem to mind r_c telling {PRONOUN/m_c/object} what to do nearly as much as other cats do."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c": {
+                "stat": {
+                    "trait": ["strict"]
+                }
+            }
+        }
+    },
+    {
+        "id": "rom_inc_high_matetraitcompassionate",
+        "strings": [
+            "m_c melts seeing how r_c cares for {PRONOUN/r_c/poss} Clanmates.",
+            "r_c's gentle nature makes m_c pine for {PRONOUN/r_c/object}.",
+            "m_c knows r_c is kind to every cat, but {PRONOUN/m_c/subject} {VERB/m_c/hope/hopes} r_c might have a special place in {PRONOUN/r_c/poss} heart for m_c."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c": {
+                "stat": {
+                    "trait": ["compassionate"]
+                }
+            }
+        }
+    },
+    {
+        "id": "rom_inc_high_matetraitthoughtful",
+        "strings": [
+            "m_c wants to get lost in thought with r_c.",
+            "r_c's mind is filled with a thousand things, but m_c can only think about {PRONOUN/r_c/object}, these days.",
+            "m_c could spend hours listening to r_c think out loud."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c": {
+                "stat": {
+                    "trait": ["thoughtful"]
+                }
+            }
+        }
+    },
+    {
+        "id": "rom_inc_high_matetraitambitious",
+        "strings": [
+            "m_c is breathless hearing about r_c's plans and goals.",
+            "Knowing about r_c's ambitions for the future, m_c pictures {PRONOUN/m_c/self} by {PRONOUN/r_c/poss} side.",
+            "m_c could spend hours listening to r_c think out loud."
+        ],
+        "involved_cats": {
+            "m_c": {},
+            "r_c": {
+                "stat": {
+                    "trait": ["ambitious"]
+                }
+            }
+        }
     }
 ]
