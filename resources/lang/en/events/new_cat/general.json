@@ -4109,7 +4109,7 @@
         }
     },
     {
-        "event_id": "gen_newcat_friendly",
+        "event_id": "gen_newcat_friendlyyyy",
         "location": ["any"],
         "season": ["any"],
         "frequency": 4,
