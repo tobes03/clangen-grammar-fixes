@@ -4107,5 +4107,36 @@
         "outsider": {
             "changed": -2
         }
+    },
+    {
+        "event_id": "gen_newcat_friendly",
+        "location": ["any"],
+        "season": ["any"],
+        "frequency": 4,
+        "event_text": "m_c met a friendly outsider named n_c:0.",
+        "m_c": {
+            "status": ["-newborn", "-kitten", "-elder"]
+        },
+        "new_cat": [
+            [
+                "exists",
+                "meeting"
+            ]
+        ],
+        "relationships": [
+            {
+                "cats_from": ["m_c"],
+                "cats_to": ["n_c:0"],
+                "mutual": true,
+                "values": ["like"],
+                "amount": 5,
+                "log": {
+                    "cats_from": "cat_from and cat_to had a friendly meeting."
+                }
+            }
+        ],
+        "outsider": {
+            "changed": 1
+        }
     }
 ]
