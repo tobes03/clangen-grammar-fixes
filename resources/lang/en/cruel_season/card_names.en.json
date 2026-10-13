@@ -11,11 +11,13 @@
     "all_elders": "Old Bones",
     "enmity": "Enmity",
     "stolen_vitality": "Stolen Vitality",
+    "tooth_and_claw": "Tooth and Claw",
     "survival_of_fittest": "Survival Of The Fittest",
     "kit_season": "Kit Season",
     "mouths_to_feed": "Mouths To Feed",
     "plague_ridden": "Plague-ridden",
     "one_cat": "Lone Steps",
+    "young_old": "Young and Old",
     "barren_stocks": "Barren Stockpiles",
     "always_newleaf": "Neverending Pollen",
     "always_greenleaf": "Neverending Heat",
@@ -23,6 +25,13 @@
     "always_leaf-bare": "Neverending Frost",
     "underpopulated": "Underpopulated",
     "heartless": "Heartless",
-    "malicious_aura": "Malicious Aura"
+    "malicious_aura": "Malicious Aura",
+    "weak_stars": "Weakened Stars",
+    "clumsy_paws": "Clumsy Paws",
+    "meagre_stocks": "Meagre Stockpiles",
+    "mate_breakup": "Not Made To Last",
+    "prideful": "Prideful",
+    "burnout": "Burnout",
+    "pride_and_joy": "Pride And Joy"
   }
 }

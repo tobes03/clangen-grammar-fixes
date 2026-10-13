@@ -8,9 +8,9 @@ import pygame
 import pygame_gui
 
 from scripts.cat import save_load
-from scripts.cat.cats import Cat, create_cat
+from scripts.cat.cats import Cat
 from scripts.cat.enums import CatAge, CatRank, CatSocial, CatGroup
-from scripts.cat.names import names
+from scripts.cat.names import Name
 from scripts.cat.status import Status
 from scripts.clan import Clan
 from scripts.clan_package.clan_names import get_possible_clan_names
@@ -163,6 +163,9 @@ class MakeClanScreenBase(Screens):
 
         self.elements: dict = {}
         self.clan_info: ClanInfo = ClanInfo()
+        # on lang change clan names may be different,
+        # so we should reload each time we enter
+        self.clan_names = get_possible_clan_names()
 
     def screen_switches(self):
         super().screen_switches()
@@ -240,7 +243,8 @@ class MakeClanScreenBase(Screens):
         game.just_died.clear()
         game.dead_cats_to_grieve.clear()
         save_load.faded_ids.clear()
-        Patrol.used_patrols.clear()
+        Patrol.used_patrols["normal"].clear()
+        Patrol.used_patrols["romance"].clear()
 
         # extra sanitization for filenames
         save_id = sub(r"[/\\?%*:|\"<>\x7F\x00-\x1F]", "-", self.clan_info.display_name)
@@ -274,11 +278,13 @@ class MakeClanScreenBase(Screens):
         return chosen_biome
 
     def random_clan_name(self):
-        clan_names = get_possible_clan_names()
+        filtered_clan_names = self.clan_names
         if self.clan_info.display_name:
-            clan_names.remove(self.clan_info.display_name)
+            filtered_clan_names = [
+                x for x in filtered_clan_names if x != self.clan_info.display_name
+            ]
 
-        return choice(clan_names)
+        return choice(filtered_clan_names)
 
     def random_card(self) -> str:
         """

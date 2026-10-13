@@ -116,7 +116,13 @@ class ClanSettingsScreen(Screens):
                 self.checkboxes["deputy"].check()
                 CruelLockedAction()
                 return
-
+            elif event.ui_element == self.checkboxes.get("affair") and not get_config(
+                "mates.allow_mating"
+            ):
+                set_clan_setting("affair", False)
+                self.checkboxes["affair"].uncheck()
+                CruelLockedAction()
+                return
             for key, value in self.checkboxes.items():
                 if value == event.ui_element:
                     switch_clan_setting(key)
@@ -356,7 +362,7 @@ class ClanSettingsScreen(Screens):
 
         self.checkboxes_text["stat_box"] = pygame_gui.elements.UITextBox(
             "screens.clan_settings.stats_text",
-            ui_scale(pygame.Rect((150, 200), (530, 345))),
+            ui_scale(pygame.Rect((150, 200), (500, 345))),
             object_id=get_text_box_theme("#text_box_30_horizcenter"),
             text_kwargs={
                 "living": str(living_cats),

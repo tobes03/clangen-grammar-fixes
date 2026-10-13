@@ -55,6 +55,8 @@ class ViewCardsWindow(GameWindow):
                 button = "origin"
             elif card_name in constants.CRUEL_CARDS_BEHAVIOR:
                 button = "behavior"
+            elif card_name in constants.CRUEL_CARDS_SOCIETY:
+                button = "society"
             else:
                 button = "environment"
 
@@ -96,7 +98,7 @@ class ViewCardsWindow(GameWindow):
         self.big_card_elements["card_title"] = pygame_gui.elements.UITextBox(
             f"cruel_season.card_names.{name}",
             ui_scale(pygame.Rect((0, 0), (300, -1))),
-            object_id=get_text_box_theme("#text_box_30_horizcenter"),
+            object_id="#text_box_30_horizcenter",
             manager=MANAGER,
             container=self.elements["card_info_container"],
             anchors={"top_target": self.big_card_elements[name]},
@@ -104,7 +106,7 @@ class ViewCardsWindow(GameWindow):
         self.big_card_elements["card_description"] = UITextBoxTweaked(
             f"cruel_season.card_descriptions.{name}",
             ui_scale(pygame.Rect((0, 0), (300, 70))),
-            object_id=get_text_box_theme("#text_box_22_horizcenter_spacing_95"),
+            object_id="#text_box_22_horizcenter_spacing_95",
             manager=MANAGER,
             container=self.elements["card_info_container"],
             anchors={
